@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Shell } from './layout/shell/shell';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [Shell],
   selector: 'app-root',
+  standalone: true,
   styleUrl: './app.scss',
   templateUrl: './app.html',
 })

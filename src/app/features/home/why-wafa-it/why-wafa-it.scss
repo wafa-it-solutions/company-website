@@ -1,0 +1,189 @@
+:host {
+  display: block;
+
+  background: var(--surface-gradient-light);
+}
+
+.why-wafa-it__layout {
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: var(--space-16);
+
+  align-items: start;
+}
+
+.why-wafa-it__intro {
+  position: sticky;
+  top: 100px;
+
+  padding: var(--space-8);
+
+  border: 1px solid var(--color-border-soft);
+  border-radius: 1rem;
+
+  background: var(--surface-gradient-soft);
+
+  box-shadow: var(--shadow-surface);
+}
+
+.why-wafa-it__eyebrow {
+  margin-bottom: var(--space-4);
+
+  color: var(--color-accent);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.why-wafa-it__title {
+  color: var(--color-primary);
+
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+
+  text-shadow: 0 1px 0 var(--highlight-white);
+}
+
+.why-wafa-it__description {
+  margin-top: var(--space-5);
+
+  color: var(--color-text-muted);
+
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+}
+
+.why-wafa-it__principles {
+  overflow: hidden;
+
+  border: 1px solid var(--color-border-soft);
+  border-radius: 1rem;
+
+  background: var(--surface-gradient-soft);
+
+  box-shadow: var(--shadow-surface);
+}
+
+.principle {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 48px 1fr;
+
+  gap: var(--space-6);
+
+  padding: var(--space-8);
+
+  background: linear-gradient(135deg, var(--highlight-white-soft), transparent 65%);
+
+  transition:
+    background 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.principle + .principle {
+  border-top: 1px solid var(--color-border-soft);
+}
+
+.principle::before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 3px;
+  height: 100%;
+
+  background-color: transparent;
+
+  transition:
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.principle:hover {
+  z-index: 1;
+
+  background: var(--surface-gradient-deep-light);
+
+  box-shadow: var(--shadow-surface-hover), var(--glow-gold);
+}
+
+.principle:hover::before {
+  background-color: var(--color-accent);
+
+  box-shadow: var(--glow-gold-soft);
+}
+
+.principle__number {
+  position: relative;
+  z-index: 1;
+
+  color: var(--color-accent);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+
+  letter-spacing: 0.04em;
+}
+
+.principle h3 {
+  position: relative;
+  z-index: 1;
+
+  color: var(--color-primary);
+
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+.principle p {
+  position: relative;
+  z-index: 1;
+
+  max-width: 600px;
+
+  margin-top: var(--space-3);
+
+  color: var(--color-text-muted);
+
+  line-height: var(--line-height-relaxed);
+}
+
+@media (max-width: 768px) {
+  .why-wafa-it__layout {
+    grid-template-columns: 1fr;
+
+    gap: var(--space-10);
+  }
+
+  .why-wafa-it__intro {
+    position: static;
+
+    padding: var(--space-6);
+  }
+
+  .why-wafa-it__title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .why-wafa-it__description {
+    font-size: var(--font-size-base);
+  }
+
+  .principle {
+    grid-template-columns: 36px 1fr;
+
+    gap: var(--space-4);
+
+    padding: var(--space-6);
+  }
+}

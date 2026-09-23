@@ -1,0 +1,142 @@
+:host {
+  display: block;
+}
+
+.industries-page__intro {
+  max-width: 820px;
+
+  padding-block: var(--space-12);
+}
+
+.industries-page__eyebrow {
+  margin-bottom: var(--space-4);
+
+  color: var(--color-accent);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.industries-page__title {
+  margin-bottom: var(--space-6);
+
+  color: var(--color-primary);
+
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.industries-page__description {
+  max-width: 720px;
+
+  color: var(--color-text-muted);
+
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+}
+
+.industries-page__grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: var(--space-6);
+}
+
+.industry-card {
+  padding: var(--space-8);
+
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+
+  background-color: var(--color-surface);
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.industry-card:hover {
+  transform: translateY(-3px);
+
+  border-color: var(--color-accent);
+
+  box-shadow: var(--shadow-md), var(--glow-gold);
+}
+
+.industry-card__number {
+  display: block;
+
+  margin-bottom: var(--space-6);
+
+  color: var(--color-accent);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+}
+
+.industry-card h2 {
+  margin-bottom: var(--space-4);
+
+  color: var(--color-primary);
+
+  font-size: var(--font-size-2xl);
+}
+
+.industry-card > p {
+  margin-bottom: var(--space-6);
+
+  color: var(--color-text-muted);
+
+  line-height: var(--line-height-relaxed);
+}
+
+.industry-card ul {
+  display: grid;
+
+  gap: var(--space-3);
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.industry-card li {
+  position: relative;
+
+  padding-left: var(--space-6);
+
+  color: var(--color-text);
+}
+
+.industry-card li::before {
+  content: '→';
+
+  position: absolute;
+  left: 0;
+
+  color: var(--color-accent);
+
+  font-weight: var(--font-weight-semibold);
+}
+
+@media (max-width: 768px) {
+  .industries-page__title {
+    font-size: var(--font-size-4xl);
+  }
+
+  .industries-page__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .industry-card {
+    padding: var(--space-6);
+  }
+}

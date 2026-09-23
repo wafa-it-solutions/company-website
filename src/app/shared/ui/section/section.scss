@@ -1,0 +1,13 @@
+:host {
+  display: block;
+}
+
+section {
+  padding-block: var(--space-20);
+}
+
+@media (max-width: 768px) {
+  section {
+    padding-block: var(--space-12);
+  }
+}

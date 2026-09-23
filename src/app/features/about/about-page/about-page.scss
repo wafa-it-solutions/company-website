@@ -1,0 +1,236 @@
+:host {
+  display: block;
+
+  background: var(--surface-gradient-light);
+}
+
+.about-page__intro {
+  position: relative;
+
+  max-width: 800px;
+
+  padding-block: var(--space-12);
+}
+
+.about-page__intro::after {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 96px;
+  height: 2px;
+
+  background-color: var(--color-accent);
+
+  box-shadow: var(--glow-gold-soft);
+}
+
+.about-page__eyebrow {
+  margin-bottom: var(--space-4);
+
+  color: var(--color-accent);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.about-page__title {
+  margin-bottom: var(--space-6);
+
+  color: var(--color-primary);
+
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+
+  text-shadow: 0 1px 0 var(--highlight-white);
+}
+
+.about-page__description {
+  max-width: 720px;
+
+  color: var(--color-text-muted);
+
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+}
+
+.about-page__mission {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: var(--space-16);
+
+  padding: var(--space-10) var(--space-8);
+
+  border: 1px solid var(--color-border-soft);
+  border-radius: 1rem;
+
+  background: var(--surface-gradient-soft);
+
+  box-shadow: var(--shadow-surface);
+}
+
+.about-page__mission h2 {
+  max-width: 560px;
+
+  color: var(--color-primary);
+
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+
+  text-shadow: 0 1px 0 var(--highlight-white);
+}
+
+.about-page__mission p {
+  color: var(--color-text-muted);
+
+  line-height: var(--line-height-relaxed);
+}
+
+.about-page__section-heading {
+  margin-bottom: var(--space-10);
+}
+
+.about-page__section-heading h2 {
+  color: var(--color-primary);
+
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+
+  text-shadow: 0 1px 0 var(--highlight-white);
+}
+
+.about-page__values-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: var(--space-6);
+}
+
+.about-page__values-grid article {
+  position: relative;
+
+  padding: var(--space-8);
+
+  overflow: hidden;
+
+  border: 1px solid var(--color-border-soft);
+  border-radius: 1rem;
+
+  background: var(--surface-gradient-soft);
+
+  box-shadow: var(--shadow-surface);
+
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.about-page__values-grid article::before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 42%;
+  height: 100%;
+
+  background: linear-gradient(135deg, var(--highlight-white-soft), transparent 70%);
+
+  box-shadow: var(--shadow-inset-subtle);
+
+  pointer-events: none;
+}
+
+.about-page__values-grid article::after {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: var(--space-8);
+
+  width: 36px;
+  height: 2px;
+
+  background-color: var(--color-accent);
+
+  box-shadow: var(--glow-gold-soft);
+
+  transition:
+    width 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.about-page__values-grid article:hover {
+  transform: translateY(-5px);
+
+  border-color: var(--color-border-accent-hover);
+
+  box-shadow: var(--shadow-surface-hover), var(--glow-gold);
+}
+
+.about-page__values-grid article:hover::after {
+  width: 58px;
+
+  box-shadow: var(--glow-gold);
+}
+
+.about-page__values-grid h3 {
+  position: relative;
+  z-index: 1;
+
+  margin-bottom: var(--space-3);
+
+  color: var(--color-primary);
+
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+.about-page__values-grid p {
+  position: relative;
+  z-index: 1;
+
+  color: var(--color-text-muted);
+
+  line-height: var(--line-height-relaxed);
+}
+
+@media (max-width: 768px) {
+  .about-page__title {
+    font-size: var(--font-size-4xl);
+  }
+
+  .about-page__mission {
+    grid-template-columns: 1fr;
+
+    gap: var(--space-8);
+
+    padding: var(--space-8) var(--space-6);
+  }
+
+  .about-page__mission h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .about-page__values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-page__values-grid article {
+    padding: var(--space-6);
+  }
+
+  .about-page__values-grid article::after {
+    left: var(--space-6);
+  }
+}

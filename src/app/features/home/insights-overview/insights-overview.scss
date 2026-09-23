@@ -1,0 +1,260 @@
+:host {
+  display: block;
+
+  background: var(--surface-gradient-warm);
+}
+
+.insights-overview__header {
+  display: grid;
+
+  grid-template-columns: 1fr 0.8fr;
+
+  gap: var(--space-12);
+
+  margin-bottom: var(--space-12);
+}
+
+.insights-overview__eyebrow {
+  margin-bottom: var(--space-4);
+
+  color: var(--color-accent);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.insights-overview__title {
+  max-width: 680px;
+
+  color: var(--color-primary);
+
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+
+  text-shadow: 0 1px 0 var(--highlight-white);
+}
+
+.insights-overview__description {
+  align-self: end;
+
+  color: var(--color-text-muted);
+
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+}
+
+.insights-overview__grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: var(--space-6);
+}
+
+.insight-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 320px;
+
+  padding: var(--space-8);
+
+  overflow: hidden;
+
+  border: 1px solid var(--color-border-soft);
+  border-radius: 1rem;
+
+  background: var(--surface-gradient-soft);
+
+  box-shadow: var(--shadow-surface);
+
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.insight-card::before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 48%;
+  height: 100%;
+
+  background: linear-gradient(135deg, var(--highlight-white-soft), transparent 70%);
+
+  box-shadow: var(--shadow-inset-subtle);
+
+  pointer-events: none;
+}
+
+.insight-card::after {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: var(--space-8);
+
+  width: 36px;
+  height: 2px;
+
+  background-color: var(--color-accent);
+
+  box-shadow: var(--glow-gold-soft);
+
+  transition:
+    width 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.insight-card:hover {
+  transform: translateY(-5px);
+
+  border-color: var(--color-border-accent-hover);
+
+  box-shadow: var(--shadow-surface-hover), var(--glow-gold);
+}
+
+.insight-card:hover::after {
+  width: 58px;
+
+  box-shadow: var(--glow-gold);
+}
+
+.insight-card__category {
+  position: relative;
+  z-index: 1;
+
+  color: var(--color-accent);
+
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.insight-card h3 {
+  position: relative;
+  z-index: 1;
+
+  margin-top: var(--space-4);
+
+  color: var(--color-primary);
+
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+.insight-card > p:not(.insight-card__category) {
+  position: relative;
+  z-index: 1;
+
+  margin-top: var(--space-4);
+
+  color: var(--color-text-muted);
+
+  line-height: var(--line-height-relaxed);
+}
+
+.insight-card__link {
+  position: relative;
+  z-index: 1;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: var(--space-2);
+
+  margin-top: auto;
+  padding-top: var(--space-6);
+
+  color: var(--color-accent);
+
+  font-weight: var(--font-weight-semibold);
+
+  transition:
+    color 150ms ease,
+    gap 150ms ease;
+}
+
+.insight-card__link:hover {
+  color: var(--color-accent-hover);
+
+  gap: var(--space-3);
+}
+
+.insights-overview__footer {
+  margin-top: var(--space-8);
+
+  text-align: right;
+}
+
+.insights-overview__all-link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: var(--space-2);
+
+  color: var(--color-primary);
+
+  font-weight: var(--font-weight-semibold);
+
+  transition:
+    color 150ms ease,
+    gap 150ms ease;
+}
+
+.insights-overview__all-link:hover {
+  color: var(--color-accent);
+
+  gap: var(--space-3);
+}
+
+@media (max-width: 900px) {
+  .insights-overview__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .insights-overview__header {
+    grid-template-columns: 1fr;
+
+    gap: var(--space-5);
+  }
+
+  .insights-overview__title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .insights-overview__description {
+    font-size: var(--font-size-base);
+  }
+
+  .insights-overview__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .insight-card {
+    min-height: auto;
+
+    padding: var(--space-6);
+  }
+
+  .insight-card::after {
+    left: var(--space-6);
+  }
+
+  .insights-overview__footer {
+    text-align: left;
+  }
+}

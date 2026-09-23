@@ -1,0 +1,186 @@
+:root {
+  /* =========================================================
+     Brand Colors
+     ========================================================= */
+
+  --color-primary: #111111;
+  --color-primary-light: #1c1c1c;
+
+  --color-accent: #c9a227;
+  --color-accent-hover: #b8901f;
+  --color-accent-light: #e6cf75;
+
+  /* =========================================================
+     Text
+     ========================================================= */
+
+  --color-text: #171717;
+  --color-text-muted: #666666;
+  --color-text-on-dark-muted: #d6d3cb;
+
+  /* =========================================================
+     Backgrounds & Surfaces
+     ========================================================= */
+
+  --color-background: #ffffff;
+  --color-background-muted: #f7f6f2;
+
+  --color-surface: #ffffff;
+  --color-surface-warm: #f3f1eb;
+  --color-surface-soft: #ebe8df;
+  --color-surface-deep: #ded9cb;
+
+  /* =========================================================
+     Borders
+     ========================================================= */
+
+  --color-border: #e5e2d8;
+  --color-border-soft: #ebe8df;
+
+  --color-border-accent: rgba(201, 162, 39, 0.24);
+
+  --color-border-accent-hover: rgba(201, 162, 39, 0.45);
+
+  --color-border-dark-accent: rgba(201, 162, 39, 0.18);
+
+  --color-border-dark-soft: rgba(255, 255, 255, 0.08);
+
+  --color-border-dark-subtle: rgba(17, 17, 17, 0.06);
+
+  /* =========================================================
+     Basic Colors
+     ========================================================= */
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* =========================================================
+     Semantic Colors
+     ========================================================= */
+
+  --color-success: #16803c;
+  --color-warning: #b7791f;
+  --color-error: #c53030;
+
+  /* =========================================================
+     Light & Shadow Surfaces
+     ========================================================= */
+
+  --surface-gradient-light: linear-gradient(135deg, #ffffff 0%, #f7f6f2 48%, #ebe8df 100%);
+
+  --surface-gradient-soft: linear-gradient(145deg, #ffffff 0%, #f3f1eb 55%, #ded9cb 100%);
+
+  --surface-gradient-warm: linear-gradient(180deg, #f7f6f2 0%, #ffffff 45%, #eeece5 100%);
+
+  --surface-gradient-deep-light: linear-gradient(135deg, #ffffff 0%, #f0eee8 48%, #d8d3c6 100%);
+
+  /* =========================================================
+     Dark Surfaces
+     ========================================================= */
+
+  --surface-dark: linear-gradient(145deg, #111111 0%, #181818 55%, #141414 100%);
+
+  /* =========================================================
+     Surface Highlights
+     ========================================================= */
+
+  --highlight-white: rgba(255, 255, 255, 0.9);
+
+  --highlight-white-soft: rgba(255, 255, 255, 0.55);
+
+  --highlight-white-strong: rgba(255, 255, 255, 0.95);
+
+  --highlight-white-card: rgba(255, 255, 255, 0.7);
+
+  /* =========================================================
+     Neutral Surface Overlays
+     ========================================================= */
+
+  --overlay-surface-warm: rgba(224, 220, 209, 0.45);
+
+  --overlay-surface-warm-soft: rgba(224, 220, 209, 0.35);
+
+  --overlay-surface-deep: rgba(216, 211, 198, 0.2);
+
+  --overlay-surface-deeper: rgba(216, 211, 198, 0.18);
+
+  --overlay-surface-content: rgba(248, 247, 243, 0.96);
+
+  /* =========================================================
+     Neutral Shadows
+     ========================================================= */
+
+  --shadow-black-subtle: rgba(0, 0, 0, 0.025);
+
+  --shadow-black-soft: rgba(0, 0, 0, 0.035);
+
+  --shadow-black-light: rgba(0, 0, 0, 0.045);
+
+  --shadow-black-medium: rgba(0, 0, 0, 0.05);
+
+  --shadow-black-card: rgba(0, 0, 0, 0.08);
+
+  --shadow-black-strong: rgba(0, 0, 0, 0.12);
+
+  /* =========================================================
+     Surface Shadows
+     ========================================================= */
+
+  --shadow-surface: -10px 12px 28px rgba(0, 0, 0, 0.08), 10px -10px 28px rgba(255, 255, 255, 0.9);
+
+  --shadow-surface-md:
+    -16px 20px 40px rgba(0, 0, 0, 0.13), 16px -16px 40px rgba(255, 255, 255, 0.9);
+
+  --shadow-surface-hover:
+    -16px 18px 36px rgba(0, 0, 0, 0.11), 14px -14px 34px rgba(255, 255, 255, 0.95);
+
+  --shadow-inset-soft:
+    inset 12px 12px 24px rgba(0, 0, 0, 0.07), inset -12px -12px 24px rgba(255, 255, 255, 0.8);
+
+  --shadow-inset-subtle: inset 14px 0 24px rgba(0, 0, 0, 0.025);
+
+  /* =========================================================
+     Existing General Shadows
+     ========================================================= */
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
+
+  /* =========================================================
+     Gold Glow
+     ========================================================= */
+
+  --glow-gold: 0 0 24px rgba(201, 162, 39, 0.18);
+
+  --glow-gold-strong: 0 0 32px rgba(201, 162, 39, 0.28);
+
+  --glow-gold-soft: 0 0 14px rgba(201, 162, 39, 0.22);
+
+  /* =========================================================
+     Dark Surface Shadows
+     ========================================================= */
+
+  --shadow-dark-top: 0 -8px 28px rgba(0, 0, 0, 0.08);
+
+  --shadow-dark-gold: 0 -2px 18px rgba(201, 162, 39, 0.06);
+
+  --glow-gold-dark: 0 0 18px rgba(201, 162, 39, 0.28);
+
+  --glow-gold-dark-soft: 0 0 14px rgba(201, 162, 39, 0.18);
+
+  /* =========================================================
+     Decorative Gold Surfaces
+     ========================================================= */
+
+  --gold-gradient: linear-gradient(135deg, #e6cf75 0%, #c9a227 50%, #b8901f 100%);
+
+  --gold-radial-glow: radial-gradient(
+    circle,
+    rgba(201, 162, 39, 0.24) 0%,
+    rgba(201, 162, 39, 0.08) 45%,
+    transparent 72%
+  );
+}

@@ -1,0 +1,112 @@
+<nav class="navigation" aria-label="Main navigation">
+  <button
+    type="button"
+    class="navigation__toggle"
+    aria-label="Toggle navigation menu"
+    [attr.aria-expanded]="isMenuOpen()"
+    aria-controls="main-navigation-menu"
+    (click)="toggleMenu()"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div
+    id="main-navigation-menu"
+    class="navigation__menu"
+    [class.navigation__menu--open]="isMenuOpen()"
+    [attr.aria-hidden]="!isMenuOpen()"
+  >
+    <ul class="navigation__list">
+      <li>
+        <a
+          routerLink="/services"
+          routerLinkActive="navigation__link--active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMenu()"
+        >
+          Services
+        </a>
+      </li>
+
+      <li>
+        <a
+          routerLink="/products"
+          routerLinkActive="navigation__link--active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMenu()"
+        >
+          Products
+        </a>
+      </li>
+
+      <li>
+        <a
+          routerLink="/industries"
+          routerLinkActive="navigation__link--active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMenu()"
+        >
+          Industries
+        </a>
+      </li>
+
+      <li>
+        <a
+          routerLink="/case-studies"
+          routerLinkActive="navigation__link--active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMenu()"
+        >
+          Case Studies
+        </a>
+      </li>
+
+      <li>
+        <a
+          routerLink="/about"
+          routerLinkActive="navigation__link--active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMenu()"
+        >
+          About
+        </a>
+      </li>
+
+      <li>
+        <a
+          routerLink="/insights"
+          routerLinkActive="navigation__link--active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMenu()"
+        >
+          Insights
+        </a>
+      </li>
+
+      <li>
+        <a
+          routerLink="/careers"
+          routerLinkActive="navigation__link--active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMenu()"
+        >
+          Careers
+        </a>
+      </li>
+
+      <li>
+        <a
+          routerLink="/contact"
+          routerLinkActive="navigation__contact--active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="navigation__contact"
+          (click)="closeMenu()"
+        >
+          Contact Us
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

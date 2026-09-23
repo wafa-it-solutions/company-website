@@ -1,0 +1,147 @@
+.footer {
+  margin-top: 0;
+
+  color: var(--color-white);
+  background: var(--surface-dark);
+  border-top: 1px solid var(--border-dark-accent);
+  box-shadow: var(--shadow-dark-top), var(--shadow-dark-gold);
+}
+
+.footer__main {
+  display: grid;
+
+  grid-template-columns: 1fr 2fr;
+
+  gap: var(--space-16);
+
+  padding-block: var(--space-16);
+}
+
+.footer__brand {
+  max-width: 360px;
+}
+
+.footer__logo {
+  display: inline-block;
+
+  color: var(--color-accent);
+
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+
+  transition:
+    color 150ms ease,
+    text-shadow 150ms ease;
+}
+
+.footer__logo:hover {
+  color: var(--color-accent-light);
+
+  text-shadow: var(--glow-gold-dark);
+}
+
+.footer__description {
+  margin-top: var(--space-4);
+
+  color: var(--color-text-on-dark-muted);
+
+  line-height: var(--line-height-relaxed);
+}
+
+.footer__links {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: var(--space-8);
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-3);
+}
+
+.footer__column h2 {
+  margin-bottom: var(--space-2);
+
+  color: var(--color-white);
+
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+}
+
+.footer__column a {
+  color: var(--color-text-on-dark-muted);
+
+  font-size: var(--font-size-sm);
+
+  transition:
+    color 150ms ease,
+    text-shadow 150ms ease;
+}
+
+.footer__column a:hover {
+  color: var(--color-accent-light);
+
+  text-shadow: var(--glow-gold-dark-soft);
+}
+
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--space-6);
+
+  padding-block: var(--space-6);
+
+  border-top: 1px solid var(--border-dark-accent);
+
+  color: var(--color-text-on-dark-muted);
+
+  font-size: var(--font-size-sm);
+}
+
+.footer__legal {
+  display: flex;
+
+  gap: var(--space-6);
+}
+
+.footer__legal a {
+  transition:
+    color 150ms ease,
+    text-shadow 150ms ease;
+}
+
+.footer__legal a:hover {
+  color: var(--color-accent-light);
+
+  text-shadow: var(--glow-gold-dark-soft);
+}
+
+@media (max-width: 768px) {
+  .footer__main {
+    grid-template-columns: 1fr;
+
+    gap: var(--space-10);
+
+    padding-block: var(--space-12);
+  }
+
+  .footer__links {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .footer__legal {
+    flex-wrap: wrap;
+  }
+}
