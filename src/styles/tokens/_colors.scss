@@ -3,49 +3,63 @@
      Brand Colors
      ========================================================= */
 
-  --color-primary: #111111;
-  --color-primary-light: #1c1c1c;
+  --color-primary: #08111f;
+  --color-primary-light: #132238;
 
-  --color-accent: #c9a227;
-  --color-accent-hover: #b8901f;
-  --color-accent-light: #e6cf75;
+  --color-accent: #d6ae55;
+  --color-accent-hover: #bd9340;
+  --color-accent-light: #ead08a;
+
+  --color-brand-cyan: #27d5f2;
+  --color-brand-cyan-dark: #18aec8;
+  --color-brand-cyan-soft: #8aeaf7;
+
+  --color-brand-navy: #08111f;
+  --color-brand-navy-light: #132238;
+  --color-brand-navy-soft: #1c2d43;
 
   /* =========================================================
      Text
      ========================================================= */
 
-  --color-text: #171717;
-  --color-text-muted: #666666;
-  --color-text-on-dark-muted: #d6d3cb;
+  --color-text: #17202b;
+  --color-text-muted: #66717d;
+  --color-text-on-dark-muted: #cbd3dc;
 
   /* =========================================================
      Backgrounds & Surfaces
      ========================================================= */
 
   --color-background: #ffffff;
-  --color-background-muted: #f7f6f2;
+  --color-background-muted: #f5f6f5;
 
   --color-surface: #ffffff;
-  --color-surface-warm: #f3f1eb;
-  --color-surface-soft: #ebe8df;
-  --color-surface-deep: #ded9cb;
+  --color-surface-warm: #f4f1e9;
+  --color-surface-soft: #ece9df;
+  --color-surface-deep: #ddd9cc;
 
   /* =========================================================
      Borders
      ========================================================= */
 
-  --color-border: #e5e2d8;
-  --color-border-soft: #ebe8df;
+  --color-border: #e1e0db;
+  --color-border-soft: #e9e7df;
 
-  --color-border-accent: rgba(201, 162, 39, 0.24);
+  --color-border-accent: rgba(214, 174, 85, 0.28);
 
-  --color-border-accent-hover: rgba(201, 162, 39, 0.45);
+  --color-border-accent-hover: rgba(214, 174, 85, 0.5);
 
-  --color-border-dark-accent: rgba(201, 162, 39, 0.18);
+  --color-border-cyan: rgba(39, 213, 242, 0.28);
+
+  --color-border-cyan-hover: rgba(39, 213, 242, 0.48);
+
+  --color-border-dark-accent: rgba(214, 174, 85, 0.2);
+
+  --color-border-dark-cyan: rgba(39, 213, 242, 0.2);
 
   --color-border-dark-soft: rgba(255, 255, 255, 0.08);
 
-  --color-border-dark-subtle: rgba(17, 17, 17, 0.06);
+  --color-border-dark-subtle: rgba(8, 17, 31, 0.08);
 
   /* =========================================================
      Basic Colors
@@ -66,19 +80,21 @@
      Light & Shadow Surfaces
      ========================================================= */
 
-  --surface-gradient-light: linear-gradient(135deg, #ffffff 0%, #f7f6f2 48%, #ebe8df 100%);
+  --surface-gradient-light: linear-gradient(135deg, #ffffff 0%, #f7f7f4 48%, #ebe9e1 100%);
 
-  --surface-gradient-soft: linear-gradient(145deg, #ffffff 0%, #f3f1eb 55%, #ded9cb 100%);
+  --surface-gradient-soft: linear-gradient(145deg, #ffffff 0%, #f3f1eb 55%, #dedbd0 100%);
 
   --surface-gradient-warm: linear-gradient(180deg, #f7f6f2 0%, #ffffff 45%, #eeece5 100%);
 
-  --surface-gradient-deep-light: linear-gradient(135deg, #ffffff 0%, #f0eee8 48%, #d8d3c6 100%);
+  --surface-gradient-deep-light: linear-gradient(135deg, #ffffff 0%, #f0efea 48%, #d9d6cc 100%);
 
   /* =========================================================
-     Dark Surfaces
+     Dark Brand Surfaces
      ========================================================= */
 
-  --surface-dark: linear-gradient(145deg, #111111 0%, #181818 55%, #141414 100%);
+  --surface-dark: linear-gradient(145deg, #08111f 0%, #0d1928 55%, #0a1523 100%);
+
+  --surface-dark-soft: linear-gradient(145deg, #132238 0%, #0d1928 55%, #08111f 100%);
 
   /* =========================================================
      Surface Highlights
@@ -140,7 +156,7 @@
   --shadow-inset-subtle: inset 14px 0 24px rgba(0, 0, 0, 0.025);
 
   /* =========================================================
-     Existing General Shadows
+     General Shadows
      ========================================================= */
 
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -153,34 +169,59 @@
      Gold Glow
      ========================================================= */
 
-  --glow-gold: 0 0 24px rgba(201, 162, 39, 0.18);
+  --glow-gold: 0 0 24px rgba(214, 174, 85, 0.2);
 
-  --glow-gold-strong: 0 0 32px rgba(201, 162, 39, 0.28);
+  --glow-gold-strong: 0 0 32px rgba(214, 174, 85, 0.3);
 
-  --glow-gold-soft: 0 0 14px rgba(201, 162, 39, 0.22);
+  --glow-gold-soft: 0 0 14px rgba(214, 174, 85, 0.2);
+
+  /* =========================================================
+     Cyan Glow
+     ========================================================= */
+
+  --glow-cyan: 0 0 24px rgba(39, 213, 242, 0.2);
+
+  --glow-cyan-strong: 0 0 32px rgba(39, 213, 242, 0.3);
+
+  --glow-cyan-soft: 0 0 14px rgba(39, 213, 242, 0.18);
 
   /* =========================================================
      Dark Surface Shadows
      ========================================================= */
 
-  --shadow-dark-top: 0 -8px 28px rgba(0, 0, 0, 0.08);
+  --shadow-dark-top: 0 -8px 28px rgba(0, 0, 0, 0.12);
 
-  --shadow-dark-gold: 0 -2px 18px rgba(201, 162, 39, 0.06);
+  --shadow-dark-gold: 0 -2px 18px rgba(214, 174, 85, 0.08);
 
-  --glow-gold-dark: 0 0 18px rgba(201, 162, 39, 0.28);
+  --shadow-dark-cyan: 0 -2px 18px rgba(39, 213, 242, 0.06);
 
-  --glow-gold-dark-soft: 0 0 14px rgba(201, 162, 39, 0.18);
+  --glow-gold-dark: 0 0 18px rgba(214, 174, 85, 0.28);
+
+  --glow-gold-dark-soft: 0 0 14px rgba(214, 174, 85, 0.18);
+
+  --glow-cyan-dark: 0 0 18px rgba(39, 213, 242, 0.24);
 
   /* =========================================================
-     Decorative Gold Surfaces
+     Brand Gradients
      ========================================================= */
 
-  --gold-gradient: linear-gradient(135deg, #e6cf75 0%, #c9a227 50%, #b8901f 100%);
+  --gold-gradient: linear-gradient(135deg, #ead08a 0%, #d6ae55 50%, #bd9340 100%);
+
+  --cyan-gradient: linear-gradient(135deg, #8aeaf7 0%, #27d5f2 50%, #18aec8 100%);
+
+  --brand-gradient: linear-gradient(135deg, #d6ae55 0%, #ead08a 38%, #27d5f2 100%);
 
   --gold-radial-glow: radial-gradient(
     circle,
-    rgba(201, 162, 39, 0.24) 0%,
-    rgba(201, 162, 39, 0.08) 45%,
+    rgba(214, 174, 85, 0.24) 0%,
+    rgba(214, 174, 85, 0.08) 45%,
+    transparent 72%
+  );
+
+  --cyan-radial-glow: radial-gradient(
+    circle,
+    rgba(39, 213, 242, 0.2) 0%,
+    rgba(39, 213, 242, 0.06) 45%,
     transparent 72%
   );
 }
