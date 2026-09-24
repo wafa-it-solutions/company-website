@@ -9,7 +9,7 @@ export class Seo {
   private readonly meta = inject(Meta);
 
   updatePage(options: { title: string; description: string }): void {
-    this.title.setTitle(`${options.title} | WAFA IT`);
+    this.title.setTitle(`${options.title} | WAFA IT SOLUTIONS`);
 
     this.meta.updateTag({
       name: 'description',

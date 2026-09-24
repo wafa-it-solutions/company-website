@@ -17,7 +17,7 @@ export class ProductsPage {
     this.seo.updatePage({
       title: 'Software Products & Digital Platforms',
       description:
-        'Explore WAFA IT software product concepts and digital platforms designed to solve real business and technology challenges.',
+        'Explore WAFA IT SOLUTIONS software product concepts and digital platforms designed to solve real business and technology challenges.',
     });
   }
 }

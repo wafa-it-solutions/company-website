@@ -17,7 +17,7 @@ export class ServicesPage {
     this.seo.updatePage({
       title: 'Software & Technology Services',
       description:
-        'Explore WAFA IT software engineering, digital transformation, IT consultancy, data, AI, cloud, and technology services.',
+        'Explore WAFA IT SOLUTIONS software engineering, digital transformation, IT consultancy, data, AI, cloud, and technology services.',
     });
   }
 }

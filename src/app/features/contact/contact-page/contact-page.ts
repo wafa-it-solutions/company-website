@@ -15,9 +15,9 @@ export class ContactPage {
 
   constructor() {
     this.seo.updatePage({
-      title: 'Contact WAFA IT',
+      title: 'Contact WAFA IT SOLUTIONS',
       description:
-        'Get in touch with WAFA IT about software products, software engineering, digital transformation, consultancy, and technology solutions.',
+        'Get in touch with WAFA IT SOLUTIONS about software products, software engineering, digital transformation, consultancy, and technology solutions.',
     });
   }
 }

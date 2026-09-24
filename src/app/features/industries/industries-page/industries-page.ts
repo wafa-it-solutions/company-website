@@ -17,7 +17,7 @@ export class IndustriesPage {
     this.seo.updatePage({
       title: 'Industries We Serve',
       description:
-        'Explore the industries and business domains where WAFA IT applies software, digital transformation, and technology solutions.',
+        'Explore the industries and business domains where WAFA IT SOLUTIONS applies software, digital transformation, and technology solutions.',
     });
   }
 }

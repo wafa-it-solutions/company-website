@@ -17,7 +17,7 @@ export class CaseStudiesPage {
     this.seo.updatePage({
       title: 'Case Studies & Selected Work',
       description:
-        'Explore selected software, digital transformation, workflow, and technology solution examples from WAFA IT.',
+        'Explore selected software, digital transformation, workflow, and technology solution examples from WAFA IT SOLUTIONS.',
     });
   }
 }

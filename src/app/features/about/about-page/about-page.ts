@@ -15,9 +15,9 @@ export class AboutPage {
 
   constructor() {
     this.seo.updatePage({
-      title: 'About WAFA IT',
+      title: 'About WAFA IT SOLUTIONS',
       description:
-        'Learn about WAFA IT, our engineering principles, mission, and approach to building technology with purpose.',
+        'Learn about WAFA IT SOLUTIONS, our engineering principles, mission, and approach to building technology with purpose.',
     });
   }
 }

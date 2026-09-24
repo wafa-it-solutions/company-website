@@ -17,7 +17,7 @@ export class InsightsPage {
     this.seo.updatePage({
       title: 'Technology Insights',
       description:
-        'Insights from WAFA IT on software engineering, architecture, digital transformation, cloud, data, AI, and technology.',
+        'Insights from WAFA IT SOLUTIONS on software engineering, architecture, digital transformation, cloud, data, AI, and technology.',
     });
   }
 }

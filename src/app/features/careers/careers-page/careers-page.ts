@@ -16,9 +16,9 @@ export class CareersPage {
 
   constructor() {
     this.seo.updatePage({
-      title: 'Careers at WAFA IT',
+      title: 'Careers at WAFA IT SOLUTIONS',
       description:
-        'Learn about working at WAFA IT and our culture of engineering, continuous learning, collaboration, and long-term thinking.',
+        'Learn about working at WAFA IT SOLUTIONS and our culture of engineering, continuous learning, collaboration, and long-term thinking.',
     });
   }
 }

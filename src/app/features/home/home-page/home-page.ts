@@ -33,7 +33,7 @@ export class HomePage {
     this.seo.updatePage({
       title: 'Software, Digital Transformation & Technology Solutions',
       description:
-        'WAFA IT builds software products and technology solutions that help organizations operate, scale, and innovate.',
+        'WAFA IT SOLUTIONS builds software products and technology solutions that help organizations operate, scale, and innovate.',
     });
   }
 }
