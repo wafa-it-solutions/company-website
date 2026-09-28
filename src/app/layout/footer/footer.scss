@@ -1,13 +1,26 @@
 .footer {
+  position: relative;
+  overflow: hidden;
+
   margin-top: 0;
 
   color: var(--color-white);
-  background: var(--surface-dark);
-  border-top: 1px solid var(--border-dark-accent);
+
+  background: var(--gold-radial-glow), var(--cyan-radial-glow), var(--surface-dark);
+
+  border-top: 1px solid var(--color-border-dark-accent);
+
   box-shadow: var(--shadow-dark-top), var(--shadow-dark-gold);
 }
 
+/* =========================================================
+   Main Footer
+   ========================================================= */
+
 .footer__main {
+  position: relative;
+  z-index: 1;
+
   display: grid;
 
   grid-template-columns: 1fr 2fr;
@@ -21,23 +34,33 @@
   max-width: 360px;
 }
 
-.footer__logo {
-  display: inline-block;
+/* =========================================================
+   Brand
+   ========================================================= */
 
-  color: var(--color-accent);
+.footer__logo {
+  display: inline-flex;
+  align-items: center;
+
+  color: var(--color-white);
 
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
 
+  text-decoration: none;
+
   transition:
     color 150ms ease,
-    text-shadow 150ms ease;
+    filter 150ms ease,
+    transform 150ms ease;
 }
 
 .footer__logo:hover {
   color: var(--color-accent-light);
 
-  text-shadow: var(--glow-gold-dark);
+  filter: drop-shadow(var(--glow-gold-soft));
+
+  transform: translateY(-1px);
 }
 
 .footer__description {
@@ -47,6 +70,10 @@
 
   line-height: var(--line-height-relaxed);
 }
+
+/* =========================================================
+   Footer Links
+   ========================================================= */
 
 .footer__links {
   display: grid;
@@ -79,16 +106,26 @@
 
   transition:
     color 150ms ease,
-    text-shadow 150ms ease;
+    text-shadow 150ms ease,
+    transform 150ms ease;
 }
 
 .footer__column a:hover {
   color: var(--color-accent-light);
 
   text-shadow: var(--glow-gold-dark-soft);
+
+  transform: translateX(var(--space-1));
 }
 
+/* =========================================================
+   Footer Bottom
+   ========================================================= */
+
 .footer__bottom {
+  position: relative;
+  z-index: 1;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -97,7 +134,7 @@
 
   padding-block: var(--space-6);
 
-  border-top: 1px solid var(--border-dark-accent);
+  border-top: 1px solid var(--color-border-dark-accent);
 
   color: var(--color-text-on-dark-muted);
 
@@ -111,6 +148,8 @@
 }
 
 .footer__legal a {
+  color: inherit;
+
   transition:
     color 150ms ease,
     text-shadow 150ms ease;
@@ -121,6 +160,10 @@
 
   text-shadow: var(--glow-gold-dark-soft);
 }
+
+/* =========================================================
+   Responsive
+   ========================================================= */
 
 @media (max-width: 768px) {
   .footer__main {
@@ -143,5 +186,40 @@
 
   .footer__legal {
     flex-wrap: wrap;
+  }
+}
+
+.footer__logo img {
+  display: block;
+
+  width: 220px;
+  height: auto;
+  max-height: 64px;
+
+  object-fit: contain;
+
+  transition:
+    filter 150ms ease,
+    transform 150ms ease;
+}
+
+.footer__logo:hover img {
+  filter: drop-shadow(var(--glow-gold-soft)) drop-shadow(var(--glow-cyan-soft));
+
+  transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+  .footer__links {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__logo img {
+    width: 180px;
+    max-height: 54px;
+  }
+
+  .footer__links {
+    grid-template-columns: 1fr;
   }
 }

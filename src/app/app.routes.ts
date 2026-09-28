@@ -56,6 +56,17 @@ export const routes: Routes = [
   },
 
   {
+    path: 'privacy',
+    loadComponent: () =>
+      import('./features/privacy/privacy-page/privacy-page').then((m) => m.PrivacyPage),
+  },
+
+  {
+    path: 'terms',
+    loadComponent: () => import('./features/terms/terms-page/terms-page').then((m) => m.TermsPage),
+  },
+
+  {
     path: '**',
     redirectTo: '',
   },

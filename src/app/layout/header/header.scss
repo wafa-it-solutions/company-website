@@ -1,6 +1,5 @@
 :host {
   display: block;
-
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -9,22 +8,42 @@
 .header {
   position: relative;
   z-index: 1000;
+  overflow: hidden;
 
-  background: var(--surface-gradient-light);
+  background: var(--gold-radial-glow), var(--cyan-radial-glow), var(--surface-gradient-light);
 
   border-bottom: 1px solid var(--color-border-soft);
 
-  box-shadow: var(--shadow-surface), var(--shadow-dark-gold);
+  box-shadow: var(--shadow-surface), var(--shadow-dark-gold), var(--shadow-dark-cyan);
 
   backdrop-filter: blur(10px);
 }
 
+/* =========================================================
+   Subtle Brand Light
+   ========================================================= */
+
+.header::before {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  background: var(--gold-radial-glow), var(--cyan-radial-glow);
+
+  opacity: 0.18;
+  pointer-events: none;
+}
+
 .header__inner {
+  position: relative;
+  z-index: 1;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  height: 72px;
+  height: calc(var(--space-16) + var(--space-2));
 }
 
 /* =========================================================
@@ -58,9 +77,9 @@
   display: block;
 
   width: 230px;
-  height: auto;
-
   max-height: 60px;
+
+  height: auto;
 
   object-fit: contain;
 }
@@ -71,7 +90,7 @@
 
 @media (max-width: 768px) {
   .header__inner {
-    height: 64px;
+    height: var(--space-16);
   }
 
   .header__logo {

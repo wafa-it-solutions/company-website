@@ -10,15 +10,22 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--color-background);
 }
 
 body {
   margin: 0;
+
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
   line-height: var(--line-height-normal);
+
   color: var(--color-text);
-  background-color: var(--color-background);
+  background: var(--gold-radial-glow), var(--cyan-radial-glow), var(--color-background);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 button,
@@ -26,6 +33,10 @@ input,
 textarea,
 select {
   font: inherit;
+}
+
+button {
+  border: 0;
 }
 
 img {
@@ -45,6 +56,8 @@ h4,
 h5,
 h6 {
   margin: 0;
+
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
 }
 
@@ -52,7 +65,41 @@ p {
   margin: 0;
 }
 
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  &:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+}
+
+::selection {
+  color: var(--color-primary);
+  background: var(--color-accent-light);
+}
+
 .container {
-  width: min(100% - 2rem, 1200px);
+  width: min(100% - var(--space-8), 1200px);
   margin-inline: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - var(--space-6), 1200px);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: min(100% - var(--space-4), 1200px);
+  }
 }
